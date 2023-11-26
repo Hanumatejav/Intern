@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,700;1,500&family=Edu+TAS+Beginner:wght@400;500&family=Roboto&display=swap');
+
+
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Alegreya', serif;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+    color: #000;
+    height: 100vh;
+}
+
+/* navbar */
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid green;
+    padding: 0 20px;
+}
+
+.title
+{
+    position: relative;
+    font-size: 35px;
+    margin: 5px;
+    color: green;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.title:after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    background-color: black;
+    content:"";
+    transition: all 0.5s;
+    height:2px;
+    left: 0;
+    bottom: -5px;
+}
+
+.title:hover:after {
+    width: 100%;
+    height:3px;
+}
+
+.title:hover
+{
+    transform: translateY(-10px);
+}
+
+.links ul
+{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.links ul li
+{
+    list-style: none;
+    transition: all 0.5s;
+}
+
+.links ul li a
+{
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    color: black;
+    font-size: 20px;
+    text-shadow: 3px 3px 10px green;
+    display: block;
+    border-radius: 5px;
+}
+
+.links li a:hover
+{
+    background-color: black;
+    box-shadow: 2px 2px 3px #fff, -2px -2px 30px greenyellow;
+    color: #fff;
+}
+
+.links li:hover
+{
+    transform: translateY(-10px);
+}
+
+.toggle
+{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 20px;
+}
+
+.toggle .bar 
+{
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+
+/* home page  */
+.content
+{
+    height: 85vh;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid green;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 50px;
+}
+
+.line1
+{
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.line2
+{
+    margin-top: 5px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.line3
+{
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.buttons
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttons button
+{
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.buttons button:hover
+{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px #000;
+    transform: translateY(-10px);
+}
+
+.pic
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.pic img
+{
+    height: 38vh;
+    border-radius: 8px;
+}
+
+.pic:hover
+{
+    transform: translateY(-20px);
+}
+
+
+
+/* about */
+.content1
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 30px;
+    border-bottom: 5px solid green;
+}
+
+.heading
+{
+    display: flex;
+    margin: 0px 60px;
+    text-align: center;
+    font-size: 50px;
+    color: green;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.heading span
+{
+    color: black;
+}
+
+.box
+{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pic1
+{
+    display: flex;
+    width: 25vw;
+}
+
+.pic1 .circular--square 
+{ 
+    padding: 10px;
+    margin-top: 65px;
+    margin-right: 20px;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%; 
+    transition: all 0.3s;
+}
+
+.pic1 .circular--square:hover
+{
+    transform: translateY(-20px);
+}
+
+.info1
+{
+    padding: 10px 15px 20px 15px;
+    width: 75vw;
+    margin-bottom: 40px;
+}
+
+.line
+{
+    font-size: 20px;
+}
+
+.line::first-letter
+{
+    color: green;
+    font-size: 50px;
+}
+
+
+
+/* skills */
+.content2
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px;
+    padding: 30px;
+    border-bottom: 5px solid black;
+}
+
+.heading1
+{
+    display: flex;
+    justify-content: center;
+    margin: 0px 60px;
+    text-align: center;
+    font-size: 50px;
+    color: green;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.container 
+{
+    margin: 50px 60px;
+    padding: 40px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+}
+
+.skills-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(6, 169, 6);
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+}
+
+.skills-list li:hover {
+    background-color: #45a049;
+    transform: translateY(-20px);
+}
+
+.skills-list li i {
+    font-size: 18px;
+}
+
+.skills-list li .description
+{
+    margin-top: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+
+
+/* contact */
+.content3
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(6, 169, 6);
+    color: #fff;
+    padding: 20px;
+}
+
+.heading2
+{
+    font-size: 50px;
+    margin-top: 45px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.heading2 span
+{
+    color: black;
+}
+
+.details
+{
+    display: flex;
+    line-height: 20px;
+    text-align: start;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+input
+{
+    width: 97%;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #150c0c;
+}
+
+input::placeholder
+{
+    color: green;
+    font-weight: 600;
+}
+
+textarea
+{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    width: 23.5vw;
+    color: #fff;
+    background-color: #150c0c;
+}
+
+textarea::placeholder
+{
+    font-weight: 600;
+    color: green;
+}
+
+.last
+{
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    cursor: pointer;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #150c0c;
+}
+
+button:hover
+{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px #000;
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    align-items: center;
+}
+
+.social a
+{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+    transition: all 0.4s;
+}
+
+.social a:hover
+{
+    color: white;
+    transform: translateY(-10px);
+}
+
+
+/* media quaries */
+@media (max-width:1500px)
+{
+    .info1
+    {
+        width: 70vw;
+    }  
+    .line
+    {
+        margin-top: 50px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width:1200px)
+{
+    .pic img 
+    {
+        height: 33vh;
+    }
+    .pic1
+    {
+        width: 25vw;
+    }
+    .pic1 .circular--square 
+    {       
+        height: 300px;
+        width: 300px;
+    }
+    .info1
+    {
+        width: 80vw;
+    }  
+    .line
+    {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:1000px)
+{
+    .info
+    {
+        line-height: 40px;
+    }
+    .line1
+    {
+        font-size: 50px;
+    }
+    .line2
+    {
+        font-size: 30px;
+    }
+    .line3
+    {
+        font-size: 15px;
+    }
+    .pic img
+    {
+        height: 30vh;
+    }
+    .pic1
+    {
+        margin-right: 60px;
+        width: 20vw;
+        margin-left: -30px;
+    }
+    .pic1 .circular--square 
+    {       
+        height: 250px;
+        width: 250px;
+    }
+    .info1
+    {
+        width: 80vw;
+    }  
+    .line
+    {
+        font-size: 16px;
+    }
+    .container
+    {
+        margin: 10px 10px 0;
+        padding: 20px;
+    }
+    .skills-list
+    {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .skills-list li:nth-child(9)
+    {
+        grid-column-start: span 2;
+    }
+    .skills-list li:nth-child(10)
+    {
+        grid-column-start: span 2;
+    }
+    .skills-list li
+    {
+        font-size: 18px;
+    }
+    .skills-list li .description
+    {
+        font-size: 13px;
+    }
+    form textarea, input
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width:700px)
+{
+    .toggle
+    {
+        display: flex;
+    }
+
+    .links
+    {
+        width: 100%;
+        display: none;
+    }
+    .links li:hover
+    {
+        background-color: #000000;
+    }
+
+    .navbar
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links ul 
+    {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .links li 
+    {
+        text-align: center;
+    }
+ 
+    .links li a 
+    {
+        padding: 4px 16px;
+    }
+
+    .links.active
+    {
+        display: flex;
+    }
+    .content
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .buttons
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .info
+    {
+        margin-top: -200px;
+        line-height: 30px;
+    }
+    .line1
+    {
+        font-size: 30px;
+    }
+    .line2
+    {
+        font-size: 20px;
+    }
+    .line3
+    {
+        font-size: 15px;
+    }
+    .buttons button
+    {
+        padding: 8px;
+        margin: 0 8px;
+        font-size: 15px;
+    }
+    .pic img
+    {
+        height: 27vh;
+        margin-left: 10px;
+    }
+    .box
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pic1
+    {
+        display: flex;
+        margin-top: -60px;
+        margin-right: auto;
+        margin-bottom: -60px;
+        margin-left: 125px;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+    }
+    .pic1 .circular--square 
+    {       
+        height: 280px;
+        width: 280px;
+        text-align: justify;
+    }
+    .info1
+    {
+        margin: auto 10px;
+        padding: 30px;
+        width: 100vw;
+    }  
+    .line
+    {
+        font-size: 16px;
+    }
+    .container
+    {
+        margin: 10px 10px 0;
+        padding: 20px;
+    }
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    
+    .skills-list li:nth-child(9)
+    {
+        grid-column-start: 3;
+    }
+    
+    .skills-list li:nth-child(10)
+    {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    form textarea, input
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px)
+{
+    .navbar
+    {
+        margin-right: -30px;
+    }
+    .toggle
+    {
+        top: 14px;
+        right: -15px;
+        width: 25px;
+        height: 20px;
+    }
+    .title
+    {
+        font-size: 30px;
+    }
+    .content
+    {
+        margin: -20px;
+    }
+    .pic img
+    {
+        margin-left: 50px;
+    }
+    .line1
+    {
+        margin-left: 30px;
+    }
+    .line2
+    {
+        margin-left: 30px;
+    }
+    .line3
+    {
+        margin-left: 35px;
+    }
+    .buttons
+    {
+        margin-left: 25px;
+    }
+    .content1
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -20px;
+    }
+    .heading
+    {
+        margin-left: 70px;
+    }
+    .pic1
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+    }
+    .pic1 .circular--square 
+    {       
+        height: 280px;
+        width: 280px;
+        margin-left: 60px;
+    }
+    .info1
+    {
+        margin-left: 45px;
+        padding: 25px;
+        width: 100vw;
+    }  
+    .line
+    {
+        font-size: 14px;
+    }
+    .content2
+    {
+        margin-right: -20px;
+    }
+    .container
+    {
+        margin: 10px 10px 0;
+        padding: 20px;
+        margin-left: 40px;
+    }
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    
+    .skills-list li:nth-child(9)
+    {
+        grid-column-start: 1;
+    }
+    
+    .skills-list li:nth-child(10)
+    {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }   
+    .content3
+    {
+        margin-right: -35px;
+    }
+    .heading2
+    {
+        margin-left: 30px;
+    }
+    .details
+    {
+        margin-left: 30px;
+    }
+    .social
+    {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width:376px)
+{
+    .toggle
+    {
+        top: 10px;
+        right: -20px;
+        width: 20px;
+        height: 15px;
+    }
+    .title
+    {
+        font-size: 25px;
+    }
+    .pic img 
+    {
+        height: 23vh;
+        margin-left: 50px;
+    }
+    .info
+    {
+        line-height: 25px;
+    }
+    .line1
+    {
+        font-size: 22px;
+    }
+    .line2
+    {
+        font-size: 16px;
+    }
+    .line3
+    {
+        font-size: 13px;
+    }
+    .buttons
+    {
+        margin-left: 30px;
+    }
+    .buttons button 
+    {
+        font-size: 12px;
+    }
+    .pic1 .circular--square
+    {
+        margin-left: -1px;
+    }
+    .container
+    {
+        padding-right: 0;
+    }
+    .heading1
+    {
+        margin-left: 100px;
+    }
+}
